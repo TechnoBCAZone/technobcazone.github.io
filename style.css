@@ -222,6 +222,7 @@ nav ul li a.active {
       grid-template-columns: 1fr;
   }
 }
+
 /* About Section Styles */
 .about-section {
   padding: 2rem;
@@ -230,17 +231,17 @@ nav ul li a.active {
 }
 
 .about-section h3 {
-  color:  #40e0d0;
+  color: #40e0d0;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  font-size: 20px; /* Changed to 20px */
+  font-size: 20px; /* Adjusted font size */
 }
 
 .about-section p {
   line-height: 1.6;
-  color:  #f8f8ff;
+  color: #f8f8ff;
   margin-bottom: 1rem;
-  font-size: 20px; /* Changed to 20px */
+  font-size: 20px; /* Adjusted font size */
 }
 
 .offerings-grid {
@@ -255,7 +256,7 @@ nav ul li a.active {
   background: #000000;
   border-radius: 8px;
   transition: transform 0.3s ease;
-  font-size: 20px; /* Changed to 20px */
+  font-size: 20px; /* Adjusted font size */
 }
 
 .offering-item:hover {
@@ -263,9 +264,9 @@ nav ul li a.active {
 }
 
 .offering-item h4 {
-  color:  #5f9ea0;
+  color: #5f9ea0;
   margin-bottom: 0.5rem;
-  font-size: 20px; /* Changed to 20px */
+  font-size: 20px; /* Adjusted font size */
 }
 
 .why-choose-us ul {
@@ -277,27 +278,31 @@ nav ul li a.active {
   padding: 0.5rem 0;
   position: relative;
   padding-left: 1.5rem;
-  font-size: 20px; /* Changed to 20px */
+  font-size: 20px; /* Adjusted font size */
 }
 
 .why-choose-us li:before {
-  content: "•";
-  color:  #ffa07a;
+  content: "\2022"; /* Unicode bullet */
+  color: #ffa07a;
   position: absolute;
   left: 0;
 }
 
 .contact-info {
   background: #ffa07a;
+  
+  word-wrap: break-word;
+  overflow-wrap: break-word;
   padding: 1.5rem;
   border-radius: 8px;
   margin-top: 1rem;
-  font-size: 20px; /* Changed to 20px */
+  font-size: 20px; /* Adjusted font size */
 }
 
 .contact-info p {
   margin: 0.5rem 0;
-  font-size: 20px; /* Changed to 20px */
+ 
+  font-size: 17px; /* Adjusted font size */
 }
 
 /* Responsive adjustments */
