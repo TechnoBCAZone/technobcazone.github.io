@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techno Knowledge Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><h1>Techno BCA Zone</h1></div>
+            <ul>
+                <li><a href="#" id="homeTab" onclick="openSection('home')">Home</a></li>
+                <li><a href="#" id="notesTab" onclick="openSection('notes')">Notes</a></li>
+                <li><a href="#" id="questionPapersTab" onclick="openSection('questionPapers')">Question Papers</a></li>
+                <li><a href="#" id="coursesTab" onclick="openSection('courses')">Courses</a></li>
+                <li><a href="#" id="aboutTab" onclick="openSection('about')">About</a></li>
+            </ul>
+        </nav>
+    
+        <!-- Main Container -->
+        <div class="container">
+            <!-- Main Content Section -->
+            <div id="mainContent">
+                <main>
+                    <section id="home" class="content-section">
+                        <h2 class="color-change">Welcome to Techno BCA Zone</h2>
+                        <p>Your one-stop solution for all BCA-related resources. Explore our features and get started on your academic journey!</p>
+                    </section>
+
+                    <section id="notes" class="content-section hidden">
+                        <h2>Notes Section</h2>
+                        <p>Here you can find notes for all BCA subjects:</p>
+                        <div id="notesList" class="notes">
+                            <h3>Notes List</h3>
+                            <ul>
+                                <li>Notes 1
+                                    <ul>
+                                        <li><a href="https://drive.google.com/file/d/1kXQWR2qsKOwVQRqIoOb_4I3d28Rx7K83/view?usp=sharing" target="_blank">Problem Solving and Program Design in C (Seventh Edition) [EnglishOnlineClub.com].pdf</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="https://drive.google.com/file/d/1MeM3aGlVZvChA_Rpm17WNgqAYqUZWqWu/view?usp=sharing" target="_blank">ntroduction to Computation and Programming Using Python by John V. Guttag (z-lib.org).pdf</a></li>
+                                <li><a href="path/to/your/note3.pdf" target="_blank">Note 3: Subject Name</a></li>
+                                <li><a href="path/to/your/note4.pdf" target="_blank">Note 4: Subject Name</a></li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section id="questionPapers" class="content-section hidden">
+                        <h2>Question Papers Section</h2>
+                        <p>Access previous question papers organized by semester and subject.</p>
+                        <div id="questionPapersList" class="questions">
+                            <h3>Semester Question Papers</h3>
+                            <ul>
+                                <li>Semester 1
+                                    <ul>
+                                        <li>Subject 1: <a href="path/to/sem1_subject1.pdf" target="_blank">Download Question Paper</a></li>
+                                        <li>Subject 2: <a href="path/to/sem1_subject2.pdf" target="_blank">Download Question Paper</a></li>
+                                        <li>Subject 3: <a href="path/to/sem1_subject3.pdf" target="_blank">Download Question Paper</a></li>
+                                        <li>Subject 4: <a href="path/to/sem1_subject4.pdf" target="_blank">Download Question Paper</a></li>
+                                        <li>Subject 5: <a href="path/to/sem1_subject5.pdf" target="_blank">Download Question Paper</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>Semester 2
+                                    <ul>
+                                        <li>Subject 1: <a href="path/to/sem1_subject1.pdf" target="_blank">Download Question Paper</a></li>
+                                        <li>Subject 2: <a href="path/to/sem1_subject2.pdf" target="_blank">Download Question Paper</a></li>
+                                        <li>Subject 3: <a href="path/to/sem1_subject3.pdf" target="_blank">Download Question Paper</a></li>
+                                        <li>Subject 4: <a href="path/to/sem1_subject4.pdf" target="_blank">Download Question Paper</a></li>
+                                        <li>Subject 5: <a href="path/to/sem1_subject5.pdf" target="_blank">Download Question Paper</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>Semester 3
+                                    <ul>
+                                        <li>Subject 1: <a href="path/to/sem1_subject1.pdf" target="_blank">Download Question Paper</a></li>
+                                        <li>Subject 2: <a href="path/to/sem1_subject2.pdf" target="_blank">Download Question Paper</a></li>
+                                        <li>Subject 3: <a href="path/to/sem1_subject3.pdf" target="_blank">Download Question Paper</a></li>
+                                        <li>Subject 4: <a href="path/to/sem1_subject4.pdf" target="_blank">Download Question Paper</a></li>
+                                        <li>Subject 5: <a href="path/to/sem1_subject5.pdf" target="_blank">Download Question Paper</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>Semester 4
+                                    <ul>
+                                        <li>Subject 1: <a href="path/to/sem1_subject1.pdf" target="_blank">Download Question Paper</a></li>
+                                        <li>Subject 2: <a href="path/to/sem1_subject2.pdf" target="_blank">Download Question Paper</a></li>
+                                        <li>Subject 3: <a href="path/to/sem1_subject3.pdf" target="_blank">Download Question Paper</a></li>
+                                        <li>Subject 4: <a href="path/to/sem1_subject4.pdf" target="_blank">Download Question Paper</a></li>
+                                        <li>Subject 5: <a href="path/to/sem1_subject5.pdf" target="_blank">Download Question Paper</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>Semester 5
+                                    <ul>
+                                        <li>Subject 1: <a href="path/to/sem1_subject1.pdf" target="_blank">Download Question Paper</a></li>
+                                        <li>Subject 2: <a href="path/to/sem1_subject2.pdf" target="_blank">Download Question Paper</a></li>
+                                        <li>Subject 3: <a href="path/to/sem1_subject3.pdf" target="_blank">Download Question Paper</a></li>
+                                        <li>Subject 4: <a href="path/to/sem1_subject4.pdf" target="_blank">Download Question Paper</a></li>
+                                        <li>Subject 5: <a href="path/to/sem1_subject5.pdf" target="_blank">Download Question Paper</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>Semester 6
+                                    <ul>
+                                        <li>Subject 1: <a href="path/to/sem1_subject1.pdf" target="_blank">Download Question Paper</a></li>
+                                        <li>Subject 2: <a href="path/to/sem1_subject2.pdf" target="_blank">Download Question Paper</a></li>
+                                        <li>Subject 3: <a href="path/to/sem1_subject3.pdf" target="_blank">Download Question Paper</a></li>
+                                        <li>Subject 4: <a href="path/to/sem1_subject4.pdf" target="_blank">Download Question Paper</a></li>
+                                        <li>Subject 5: <a href="path/to/sem1_subject5.pdf" target="_blank">Download Question Paper</a></li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section id="courses" class="content-section hidden">
+                        <h2>Courses Section</h2>
+                        <p>Overview and details of the BCA course curriculum.</p>
+                        <div id="semesterList" class="semesters">
+                            <h3>Semesters</h3>
+                            <ul>
+                                <li>Semester 1
+                                    <ul>
+                                        <li><a href="https://drive.google.com/file/d/12ywiWLAzMEdThg_g3CUNKCkMav5DS1xA/view?usp=sharing" target="_blank">Download Syllabus</a></li>
+<li>Semester 2
+                                <ul>
+                                    <li><a href="https://drive.google.com/file/d/1gdl8GBnkUAgupCbpayWsXnbZvrE-NZ_d/view?usp=sharing" target="_blank">Download Syllabus</a></li>
+                                </ul>
+                            </li>
+                            <li>Semester 3
+                                <ul>
+                                    <li><a href="https://drive.google.com/file/d/1WO9FufrLTMbuCSEAn1aJbiC6am1ZLtk3/view?usp=sharing" target="_blank">Download Syllabus</a></li>
+                                </ul>
+                            </li>
+                            <li>Semester 4
+                                <ul>
+                                    <li><a href="https://drive.google.com/file/d/16ypLmikoQPNSJoP8GyxsKiJUxD1WBV-J/view?usp=sharing" target="_blank">Download Syllabus</a></li>
+                                </ul>
+                            </li>
+                            <li>Semester 5
+                                <ul>
+                                    <li><a href="https://drive.google.com/file/d/1f9CiSXP6PGOAAxO0sWFdDJ5wtsUXGYbM/view?usp=sharing" target="_blank">Download Syllabus</a></li>
+                                </ul>
+                            </li>
+                            <li>Semester 6
+                                <ul>
+                                    <li><a href="https://drive.google.com/file/d/1kkyYgS9t6bFj1g-LSqe7cbKjZynvwngH/view?usp=sharing" target="_blank">Download Syllabus</a></li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section id="about" class="content-section hidden">
+    <h2>About Us</h2>
+    
+    <div class="about-section">
+        <div class="mission">
+            <h3>Our Mission</h3>
+            <p>At Techno BCA Zone, our mission is to provide high-quality study materials, notes, courses, and question papers to BCA students. We aim to help students achieve academic excellence and excel in their careers.</p>
+        </div>
+
+        <div class="vision">
+            <h3>Our Vision</h3>
+            <p>Our vision is to become the leading online platform for BCA studies, providing comprehensive and up-to-date resources to students worldwide.</p>
+        </div>
+
+        <div class="offerings">
+            <h3>What We Offer</h3>
+            <div class="offerings-grid">
+                <div class="offering-item">
+                    <h4>Detailed Notes</h4>
+                    <p>Comprehensive notes covering all BCA subjects and topics</p>
+                </div>
+                <div class="offering-item">
+                    <h4>Previous Question Papers</h4>
+                    <p>Access to past exam papers from all semesters</p>
+                </div>
+                <div class="offering-item">
+                    <h4>Course Materials</h4>
+                    <p>Well-structured course content and study materials</p>
+                </div>
+                            </div>
+        </div>
+
+        <div class="why-choose-us">
+            <h3>Why Choose Us</h3>
+            <ul>
+                <li>Study materials designed by experienced faculty members and industry experts</li>
+                <li>Courses tailored specifically for BCA students</li>
+                <li>Practice materials designed to simulate real examination scenarios</li>
+                <li>User-friendly interface with easy navigation</li>
+            </ul>
+        </div>
+
+        <div class="team">
+            <h3>Our Team</h3>
+            <p>Our dedicated team consists of experienced educators, industry experts, and professionals who are passionate about helping students succeed. We work tirelessly to ensure that our platform provides the highest quality resources and support to BCA students worldwide.</p>
+        </div>
+
+        <div class="contact">
+            <h3>Contact Us</h3>
+            <p>Have questions, suggestions, or feedback? We'd love to hear from you! Reach out to us through:</p>
+            <div class="contact-info">
+                <p>Email:arspim22087088076@gmail.com</p>
+                <p>Phone: +91 XXXXXXXXXX</p>
+                <p>Address: Techno India United, City: Kolkata, State: West-Bengal, PIN Code: 700091</p>
+            </div>
+        </div>
+    </div>
+</section>
+                </main>
+            </div>
+        </div>
+    </header>
+    <script src="script.js"></script>
+</body>
+</html>

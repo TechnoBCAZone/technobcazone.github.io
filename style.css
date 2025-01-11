@@ -1,0 +1,313 @@
+/* General Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+/* CSS Variables */
+:root {
+  --primary-bg: rgba(0, 0, 0, 0.4);
+  --primary-color: #00b894;
+  --hover-bg: rgba(0, 184, 148, 0.2);
+  --text-shadow: rgba(0, 0, 0, 0.3);
+}
+
+/* Header Section */
+header {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url("photo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  overflow-y: auto;
+}
+
+/* Navigation Bar */
+nav {
+  width: 100%;
+  height: 15vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  padding: 0 50px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav .logo {
+  width: 25%;
+  text-align: center;
+}
+
+nav .logo h1 {
+  font-size: 2rem;
+  text-shadow: 2px 2px 4px var(--text-shadow);
+}
+
+nav ul {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+nav ul li a.active {
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Main Content */
+.container {
+  min-height: 85vh;
+  padding: 20px;
+}
+
+#mainContent {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.content-section {
+  display: none;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.content-section.active {
+  display: block;
+}
+
+.content-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px var(--text-shadow);
+  text-align: center;
+}
+
+.content-section p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 2px var(--text-shadow);
+  text-align: center;
+}
+
+/* Common styles for sections */
+.semesters, .notes, .questions {
+  margin-top: 20px;
+  background-color: var(--primary-bg);
+  padding: 30px;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.semesters.show, .notes.show, .questions.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.semesters h3, .notes h3, .questions h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.semesters ul, .notes ul, .questions ul {
+  list-style-type: none;
+  padding: 0 20px;
+}
+
+.semesters > ul > li, .notes > ul > li, .questions > ul > li {
+  margin: 10px 0;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.semesters ul li ul, .notes ul li ul, .questions ul li ul {
+  margin-top: 10px;
+}
+
+.semesters ul li a, .notes ul li a, .questions ul li a {
+  color: var(--primary-color);
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 15px;
+  background-color: rgba(0, 184, 148, 0.1);
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.semesters ul li a:hover, .notes ul li a:hover, .questions ul li a:hover {
+  background-color: var(--hover-bg);
+  transform: scale(1.05);
+}
+
+/* Animation */
+@keyframes colorChange {
+  0% { color: #00ff7f; }
+  20% { color: #ff7f50; }
+  40% { color: yellow; }
+  60% { color: #f4a460; }
+  80% { color: orange; }
+  100% { color: red; }
+}
+
+.color-change {
+  animation: colorChange 5s linear infinite;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  nav {
+      padding: 20px;
+      flex-direction: column;
+      height: auto;
+  }
+
+  nav .logo {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+
+  nav ul {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+  }
+
+  .content-section {
+      padding: 10px;
+  }
+
+  .content-section h2 {
+      font-size: 2rem;
+  }
+
+  .semesters ul, .notes ul, .questions ul {
+      grid-template-columns: 1fr;
+  }
+}
+/* About Section Styles */
+.about-section {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-section h3 {
+  color:  #40e0d0;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 20px; /* Changed to 20px */
+}
+
+.about-section p {
+  line-height: 1.6;
+  color:  #f8f8ff;
+  margin-bottom: 1rem;
+  font-size: 20px; /* Changed to 20px */
+}
+
+.offerings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.offering-item {
+  padding: 1.5rem;
+  background: #000000;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  font-size: 20px; /* Changed to 20px */
+}
+
+.offering-item:hover {
+  transform: translateY(-5px);
+}
+
+.offering-item h4 {
+  color:  #5f9ea0;
+  margin-bottom: 0.5rem;
+  font-size: 20px; /* Changed to 20px */
+}
+
+.why-choose-us ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.why-choose-us li {
+  padding: 0.5rem 0;
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: 20px; /* Changed to 20px */
+}
+
+.why-choose-us li:before {
+  content: "•";
+  color:  #ffa07a;
+  position: absolute;
+  left: 0;
+}
+
+.contact-info {
+  background: #ffa07a;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  font-size: 20px; /* Changed to 20px */
+}
+
+.contact-info p {
+  margin: 0.5rem 0;
+  font-size: 20px; /* Changed to 20px */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-section {
+      padding: 1rem;
+  }
+  
+  .offerings-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+  }
+}
