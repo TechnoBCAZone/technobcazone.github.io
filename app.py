@@ -5,10 +5,11 @@ from config import db_config
 from werkzeug.security import generate_password_hash, check_password_hash
 from dotenv import load_dotenv
 
+# Initialize Flask
 app = Flask(__name__)
-app.secret_key = os.getenv("SECRET_KEY", "default_secret_key")  # Load secret key
+app.secret_key = os.getenv("SECRET_KEY", "default_secret_key")  # Secret key for session handling
 
-# Function to get a database connection
+# Function to establish a database connection
 def get_db_connection():
     return mysql.connector.connect(**db_config)
 
@@ -54,4 +55,4 @@ def register():
     return render_template('register.html')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=int(os.getenv("PORT", 5000)), debug=True)  # Ensure correct host & port
