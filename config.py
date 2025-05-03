@@ -1,8 +1,8 @@
 # config.py
 
 db_config = {
-    'host': "localhost",
-    'user': "root",
-    'password': "Aniket@2004",
-    'database': "user_auth"
+    'host': "sql12.freesqldatabase.com",
+    'user': "sql12776701",
+    'password': "your_actual_password",  # Replace with the correct password
+    'database': "sql12776701"
 }
