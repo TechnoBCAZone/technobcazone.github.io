@@ -14,37 +14,29 @@ const CONFIG = {
 
 // Initialize the page
 document.addEventListener('DOMContentLoaded', function() {
-    openSection('home');
+    // Show login container by default
+    document.getElementById('container').style.display = 'block';
+    document.getElementById('mainContent').style.display = 'none';
+    document.getElementById('mainNav').style.display = 'none';
 });
 
 // Main section opening function
 function openSection(sectionId) {
-    // Hide all sections and remove active class
-    domElements.sections.forEach((section) => {
+    // Hide all sections
+    const sections = document.querySelectorAll('.content-section');
+    sections.forEach(section => {
         section.style.display = 'none';
-        section.classList.remove('active');
     });
 
     // Show selected section
     const selectedSection = document.getElementById(sectionId);
     if (selectedSection) {
         selectedSection.style.display = 'block';
-        selectedSection.classList.add('active');
-
-        // Handle animations for specific sections
-        const sectionAnimations = {
-            'courses': '.semesters',
-            'notes': '.notes',
-            'questionPapers': '.questions'
-        };
-
-        if (sectionAnimations[sectionId]) {
-            animateSection(selectedSection, sectionAnimations[sectionId]);
-        }
     }
 
     // Update navigation active states
-    domElements.navLinks.forEach((link) => {
+    const navLinks = document.querySelectorAll('nav ul li a');
+    navLinks.forEach(link => {
         link.classList.remove('active');
     });
 
@@ -82,13 +74,53 @@ function changeColor() {
 }
 
 setInterval(changeColor, CONFIG.colorChangeInterval);
-// Smooth Scroll JavaScript
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
 
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
+// Login functionality
+const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('container');
+
+signUpButton.addEventListener('click', () => {
+    container.classList.add('right-panel-active');
 });
+
+signInButton.addEventListener('click', () => {
+    container.classList.remove('right-panel-active');
+});
+
+// Handle login form submission
+document.querySelector('.sign-in-container form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const email = this.querySelector('input[type="email"]').value;
+    const password = this.querySelector('input[type="password"]').value;
+
+    // Here you would typically validate credentials with a server
+    // For demo purposes, we'll just check if fields are not empty
+    if (email && password) {
+        // Show main content and navigation
+        document.getElementById('mainNav').style.display = 'block';
+        document.getElementById('mainContent').style.display = 'block';
+        
+        // Hide login container
+        document.getElementById('container').style.display = 'none';
+        
+        // Show home section
+        openSection('home');
+    } else {
+        alert('Please fill in all fields');
+    }
+});
+
+// Logout functionality
+function logout() {
+    // Hide main content and navigation
+    document.getElementById('mainNav').style.display = 'none';
+    document.getElementById('mainContent').style.display = 'none';
+    
+    // Show login container
+    document.getElementById('container').style.display = 'block';
+    
+    // Clear form fields
+    document.querySelector('.sign-in-container form').reset();
+}
+
