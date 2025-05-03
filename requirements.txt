@@ -1,4 +1,3 @@
-Flask
+flask
 mysql-connector-python
 python-dotenv
-werkzeug
