@@ -123,4 +123,3 @@ function logout() {
     // Clear form fields
     document.querySelector('.sign-in-container form').reset();
 }
-
